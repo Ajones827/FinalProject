@@ -1,8 +1,8 @@
 /**Class: Player.java
  * @author Malik Key
  * @version 1.0
- * Course: ITEC 3860, Spring 2022
- * Written: 02/18 - 03/11
+ * Course: ITEC 3860
+ * Written: 07/13/25
  *
  *
  * This class acts as a blueprint for all Player objects.
