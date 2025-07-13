@@ -1,6 +1,6 @@
-Basic Functionality of TextBased Adventure Game - Lost Residence
+Basic Functionality of TextBased Adventure Game - TerraCraft
 
-The rooms file consists of 34 rooms.
+The rooms file consists of 30 rooms.
 
 Each Room contains:
 
