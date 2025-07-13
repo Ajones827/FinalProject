@@ -1,8 +1,8 @@
 /**Class: logIn
- * @author Kyle Williams
+ * @author Malik Key
  * @version 1.0
- * Course: ITEC 3860, Spring 2022
- * Written: 04/23
+ * Course: ITEC 3860
+ * Written: 07/13/25
  *
  *
  * Creates the structure for the logIn method to be used in the GameController.
