@@ -1,5 +1,5 @@
 /**Class: Player.java
- * @author Kyle Williams, Rick Price, Bradley Iverson, Miranda Darlington
+ * @author Malik Key
  * @version 1.0
  * Course: ITEC 3860, Spring 2022
  * Written: 02/18 - 03/11
