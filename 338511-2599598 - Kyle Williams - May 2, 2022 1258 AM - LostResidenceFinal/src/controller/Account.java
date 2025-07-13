@@ -1,8 +1,8 @@
 /**Class: Account
- * @author Kyle Williams, Miranda Darlington, Bradley Iverson
+ * @author Malik Key
  * @version 1.0
- * Course: ITEC 3860, Spring 2022
- * Written: 02/18 - 04/27
+ * Course: ITEC 3860
+ * Written: 07/13/25
  *
  *
  * This class wasn't really needed but I keep it in here just in case we need to create account objects
