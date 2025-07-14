@@ -1,8 +1,7 @@
 /**Class: GameDBCreate.java
- * @author Rick Price, Kyle Williams, Bradley Iverson, Miranda Darlington
+ * @author Sidibaba Simpara, Malik Key, Britney Familia, Angelica Jones
  * @version 1.0
- * Course: ITEC 3860, Spring 2022
- * Written: 03/11 - 04/27
+ * Course: ITEC 3860, Summer 2025
  *
  *
  * This class get the needed information in regards creating the database tables
