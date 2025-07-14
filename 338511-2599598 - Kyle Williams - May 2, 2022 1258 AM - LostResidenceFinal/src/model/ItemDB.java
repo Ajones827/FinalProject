@@ -1,8 +1,7 @@
 /**Class: ItemDB.java
- * @author Kyle Williams, Rick Price, Bradley Iverson, Miranda Darlington
+ * @author Sidibaba Simpara
  * @version 1.0
- * Course: ITEC 3860, Spring 2022
- * Written: 02/18 - 04/27
+ * Course: ITEC 3860, Summer 2025
  *
  *
  * The purpose of this class is to hold the queries that update and get information
