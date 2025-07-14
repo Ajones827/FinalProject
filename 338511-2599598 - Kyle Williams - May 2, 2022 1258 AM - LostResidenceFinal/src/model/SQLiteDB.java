@@ -1,10 +1,10 @@
 /**
  * Class : SQLiteDB.java
  *
- * @author: Rick Price
+ * @author: Sidibaba Simpara
  * @version: 1.0
  * Course: ITEC 3860
- * Written: June 22, 2021
+ * Written: Summer 2025
  * This class the base interface to the SQLite database
  * Purpose: Execute queries and updates in the SQLite database
  */
