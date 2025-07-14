@@ -1,19 +1,18 @@
 package model;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
  * Class : DB.java
- * @author: Sidibaba Simpara, Malik Key, Britney Familia, Angelica Jones
+ * @author: Sidibaba Simpara, Malik Key, Briney Familia, Angelica Jones
  * @version: 2.0
- * Course: ITEC 3860, Summer 2025
- * This class controls basic DB functionality
- * Purpose:Has Query and Update DB
+ * Purpose: Controls basic DB functionality (Query and Update DB)
  */
-abstract public class DB {
+public abstract class DB {
     protected String dbName = "Game.db";
     protected String sJdbc;
     protected String sDriverName;
@@ -22,44 +21,49 @@ abstract public class DB {
     protected int timeout = 5;
 
     /**
-     * Method: queryDB
-     * Purpose: read from the database
-     * @param sql
+     * Initializes the database connection.
+     */
+    public void initConnection() {
+        try {
+            Class.forName("org.sqlite.JDBC"); // optional in newer JDBC versions
+            sDbUrl = "jdbc:sqlite:" + dbName;
+            conn = DriverManager.getConnection(sDbUrl);
+        } catch (ClassNotFoundException | SQLException e) {
+            System.err.println("Failed to connect to database: " + e.getMessage());
+        }
+    }
+
+    /**
+     * Query the database.
+     * @param sql SQL SELECT statement
      * @return ResultSet
      * @throws SQLException
      */
     public ResultSet queryDB(String sql) throws SQLException {
-        ResultSet rs = null;
         Statement stmt = conn.createStatement();
         stmt.setQueryTimeout(timeout);
-        rs = stmt.executeQuery(sql);
-        return rs;
+        return stmt.executeQuery(sql);
     }
 
     /**
-     * Method: updateDB
-     * Purpose: Updates the database
-     * @param SQL
-     * @return boolean
+     * Execute a database update (INSERT, UPDATE, DELETE).
+     * @param SQL update statement
+     * @return boolean success
      * @throws SQLException
      */
     public boolean updateDB(String SQL) throws SQLException {
         Statement stmt = conn.createStatement();
-        boolean success = stmt.execute(SQL);
-        return success;
+        return stmt.execute(SQL);
     }
 
     /**
-     * Method: count
-     * Purpose: Gets the count of records in the specified table
-     * @param table
-     * @return int
+     * Get the count of records in the specified table.
      */
     public int count(String table) {
         int cnt = 0;
         try {
             Statement stmt = conn.createStatement();
-            String sql = "Select count(*) as count from \"" + table + "\"";
+            String sql = "SELECT COUNT(*) AS count FROM \"" + table + "\"";
             ResultSet rs = stmt.executeQuery(sql);
             cnt = rs.getInt(1);
         } catch (SQLException sqe) {
@@ -69,22 +73,31 @@ abstract public class DB {
     }
 
     /**
-     * Method: getMaxValue
-     * Purpose: Gets max value for a particular field in a particular table
-     * @param columnName
-     * @param table
-     * @return int
+     * Get max value for a column in a table.
      */
     public int getMaxValue(String columnName, String table) {
         int max = 0;
         try {
             Statement stmt = conn.createStatement();
-            String sql = "Select MAX(" + columnName + ") from " + table;
+            String sql = "SELECT MAX(" + columnName + ") FROM " + table;
             ResultSet rs = stmt.executeQuery(sql);
             max = rs.getInt(1);
         } catch (SQLException sqe) {
             System.out.println(sqe.getMessage());
         }
         return max;
+    }
+
+    /**
+     * Close the database connection safely.
+     */
+    public void close() {
+        try {
+            if (conn != null && !conn.isClosed()) {
+                conn.close();
+            }
+        } catch (SQLException e) {
+            System.err.println("Failed to close DB: " + e.getMessage());
+        }
     }
 }
