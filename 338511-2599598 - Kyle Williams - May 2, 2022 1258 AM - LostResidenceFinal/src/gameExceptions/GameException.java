@@ -1,5 +1,5 @@
 /**Class: GameController.java
- * @author Sidibaba Simpara
+ * @author Sidibaba Simpara, Malik Key, Britney Familia, Angelica Jones
  * @version 1.0
  * Course: ITEC 3860, Spring 2025
  *
