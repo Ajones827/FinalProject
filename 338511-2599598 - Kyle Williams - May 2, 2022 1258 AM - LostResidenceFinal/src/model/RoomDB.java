@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class RoomDatabase {
+public class RoomDB {
 
     public static HashMap<Integer, Room> loadRooms(String filename) {
         HashMap<Integer, Room> rooms = new HashMap<>();
