@@ -4,4 +4,5 @@ INSERT INTO ITEM (roomID, inInventory, itemName, itemDesc, playerID, canHeal, he
 (2, 0, 'Magic Scroll', 'Reveals hint for puzzle — shows puzzle clue', 1, 0, NULL),
 (3, 0, 'Shield of Light', 'Blocks next monster attack — one-time protection', 1, 0, NULL),
 (4, 0, 'Compass', 'Shows all exits in current room — helpful for navigation', 1, 0, NULL),
-(5, 0, 'Weapons', 'Player can pick up swords or axes — helpful for combat', 1, 0, NULL);
+(5, 0, 'Sword', 'Player can pick up swords or axes — helpful for combat', 1, 0, NULL);
+(6, 0, 'axe', 'Player can pick up swords or axes — helpful for combat', 1, 0, NULL);
