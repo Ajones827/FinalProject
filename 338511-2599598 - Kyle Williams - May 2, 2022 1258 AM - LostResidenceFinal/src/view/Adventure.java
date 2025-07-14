@@ -64,12 +64,7 @@ public class Adventure {
 
         System.out.println("Welcome to TerraCraft...");
 
-        // Just putting it here in case anyone wants to add this XD
-        System.out.println("______              _____     ________            ______________           _____");
-        System.out.println("___  / _______________  /_    ___  __ \\______________(_)_____  /_____________  /_");
-        System.out.println("__  /  _  __ \\_  ___/  __/    __  /_/ /  _ \\_  ___/_  /_  __  /_  _ \\_  __ \\  __");
-        System.out.println("_  /___/ /_/ /(__  )/ /_      _  _, _//  __/(__  )_  / / /_/ / /  __/  / / / /_ ");
-        System.out.println("/_____/\\____//____/ \\__/      /_/ |_| \\___//____/ /_/  \\__,_/  \\___//_/ /_/\\__/ ");
+    
 
         System.out.println("Would you like to play? Type [exit] to back out.");
 
