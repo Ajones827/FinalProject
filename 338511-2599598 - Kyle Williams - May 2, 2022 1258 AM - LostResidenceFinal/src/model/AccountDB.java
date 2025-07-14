@@ -1,8 +1,8 @@
 /**Class: AccountDB.java
- * @author Kyle Williams
+ * @author Sidibaba Simpara, Malik Key, Britney Familia, Angelica Jones
  * @version 1.0
- * Course: ITEC 3860, Spring 2022
- * Written: 04/15 - 04/25
+ * Course: ITEC 3860, Summer 2025
+ * 
  *
  *
  * This class get the needed information in regards to accounts from the database.
