@@ -26,4 +26,6 @@ INSERT INTO ROOM(roomNumber, roomName, roomDescription, visited) Values(24|Dinin
 INSERT INTO ROOM(roomNumber, roomName, roomDescription, visited) Values(25|Armory|Castle|Weapons line the walls.|false|south:27)
 INSERT INTO ROOM(roomNumber, roomName, roomDescription, visited) Values(26|Prison Cell|Castle|Chains hang from the walls.|false|north:28,west:24)
 INSERT INTO ROOM(roomNumber, roomName, roomDescription, visited) Values(27|Library|Castle|Rows of old books and a magic scroll.|false|east:28)
-INSERT INTO ROOM(roomNumber, roomName, roomDescription, visited) Values(28|Secret Passage|Castle|A hidden hallway leads)
+INSERT INTO ROOM(roomNumber, roomName, roomDescription, visited) Values(28|Secret Passage|Castle|A hidden hallway leads.|false|south:29)
+INSERT INTO ROOM(roomNumber, roomName, roomDescription, visited) Values(29|War Room|Castle|Maps cover the walls.|false|south:30)
+INSERT INTO ROOM(roomNumber, roomName, roomDescription, visited) Values(30|Throne Room|Castle|A dark wizard is next to the throne.)
