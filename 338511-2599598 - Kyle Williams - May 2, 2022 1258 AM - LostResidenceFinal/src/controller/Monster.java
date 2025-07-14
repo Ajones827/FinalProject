@@ -1,8 +1,8 @@
 /**Class: Monster.java
- * @author Miranda Darlington, Bradley Iverson, Kyle Williams, Rick Price
+ * @author Sidibaba Simpara, Malik Key, Britney Familia, Angelica Jones
  * @version 1.0
- * course: ITEC 3860 Spring 2022
- * Written: Apr 5, 2022
+ * course: ITEC 3860 Summer 2025
+ * 
  *
  *This class- !!!!!!
  *taken and modified from monster.java from hp repository on GitHub
