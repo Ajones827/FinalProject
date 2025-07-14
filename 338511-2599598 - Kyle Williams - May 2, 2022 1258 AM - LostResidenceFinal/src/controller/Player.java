@@ -1,8 +1,8 @@
 /**Class: Player.java
- * @author Malik Key
+ * @author Sidibaba Simpara, Malik Key, Britney Familia, Angelica Jones
  * @version 1.0
- * Course: ITEC 3860
- * Written: 07/13/25
+ * Course: ITEC 3860, Summer 2025
+ *
  *
  *
  * This class acts as a blueprint for all Player objects.
