@@ -1,8 +1,7 @@
-/**Class: RoomDB.java
- * @author Kyle Williams, Rick Price, Hyesung Park
+/**Class: RoomDatabase
+ * @author Sidibaba Simpara, Malik Key, Britney Familia, Angelica Jones
  * @version 1.0
- * Course: ITEC 3860, Spring 2022
- * Written: 02/18 - 04/27
+ * Course: ITEC 3860, Summer 2025
  *
  *
  * The purpose of this class is to hold methods that update and query the database.
