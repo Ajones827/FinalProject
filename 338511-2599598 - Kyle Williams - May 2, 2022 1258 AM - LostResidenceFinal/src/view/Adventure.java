@@ -62,7 +62,7 @@ public class Adventure {
 
     private void playGame() throws GameException, SQLException, ClassNotFoundException {
 
-        System.out.println("Welcome to Lost Residence..");
+        System.out.println("Welcome to TerraCraft...");
 
         // Just putting it here in case anyone wants to add this XD
         System.out.println("______              _____     ________            ______________           _____");
