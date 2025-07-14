@@ -1,1 +1,8 @@
 CREATE TABLE MONSTER(MonsterID integer not Null Primary Key autoincrement, RoomNumber text not Null, MonsterName text not Null, MonsterDescription text not Null, hitPoints int not Null, attackDamage int not Null,isDead int not Null, isThere int Null, playerID int not null); FOREIGN KEY (playerID) REFERENCES PLAYER (playerID);
+INSERT INTO MONSTER (RoomNumber, MonsterName, MonsterDescription, hitPoints, attackDamage, isDead, isThere, playerID) VALUES
+(8, 'Slime Monster', 'Bounce attack — Low damage', 20, 5, 0, 1, 1),
+(15, 'Cave Bat', 'Swoop attack — Has a chance to dodge', 30, 8, 0, 1, 1),
+(25, 'Skeleton Knight', 'Sword Slash — Can block 1 attack', 50, 12, 0, 1, 1),
+(16, 'Zombie Miner', 'Pickaxe hit — Drops rare item', 45, 10, 0, 1, 1),
+(6, 'Goblin', 'Stab — Steals 1 item on hit', 25, 9, 0, 1, 1),
+(28, 'Dark Wizard', 'Shadow Spell — Final boss, high damage', 75, 20, 0, 1, 1);
