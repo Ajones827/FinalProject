@@ -1,5 +1,5 @@
-/**Class: PlayerDB.java
- * @author Sidibaba Simpara
+/**Class: PuzzleDB.java
+ * @author Sidibaba Simpara, Malik Key, Britney Familia, Angelica Jones
  * @version 1.0
  * course: ITEC 3860 Summer 2025
  *
