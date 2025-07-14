@@ -1,9 +1,7 @@
 /**Class: PlayerDB.java
- * @author Bradley Iverson
- * @updated Kyle Williams
+ * @author Sidibaba Simpara
  * @version 1.0
- * course: ITEC 3860 Spring 2022
- * Written: Apr 6 - Apr 27, 2022
+ * course: ITEC 3860 Summer 2025
  *
  *This class updates and queries the database in regards to the puzzle functionality.
  **/
