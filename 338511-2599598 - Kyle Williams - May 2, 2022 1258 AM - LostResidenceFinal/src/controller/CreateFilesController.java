@@ -1,10 +1,9 @@
 /**
  * Class : CreateFilesController.java
- * @author: Rick Price
- * @updated: Hyesung Park
+ * @author: Sidibaba Simpara, Malik Key, Britney Familia, Angelica Jones
  * @version: 2.0
- * Course: ITEC 3860
- * updated: March 26, 2022
+ * Course: ITEC 3860, Summer 2025
+ *
  * This class calls into the model to build the database if it doesn't exist.
  */
 
