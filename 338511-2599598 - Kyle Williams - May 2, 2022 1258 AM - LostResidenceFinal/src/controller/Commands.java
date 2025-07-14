@@ -1,8 +1,8 @@
 /**Class: Commands
- * @author Malik Key
+ * @author Sidibaba Simpara, Malik Key, Britney Familia, Angelica Jones
  * @version 1.0
- * Course: ITEC 3860
- * Written: 07/13/25
+ * Course: ITEC 3860, Summer 2025
+
 
  * This class distributes commands passed in by the user. It interacts with the databases based on what commands are
  * given at a any particular time.
