@@ -1,8 +1,8 @@
 /**Class: Puzzle
- * @author Bradley Iversen
+ * @author Sidibaba Simpara, Malik Key, Britney Familia, Angelica Jones
  * @version 1.0
- * Course: ITEC 3860, Spring 2022
- * Written: 04-13-2022
+ * Course: ITEC 3860, Summer 2025
+ * 
  *
  *
  * This class serves as the blueprint for all puzzle objects that get stores in the puzzle database.
