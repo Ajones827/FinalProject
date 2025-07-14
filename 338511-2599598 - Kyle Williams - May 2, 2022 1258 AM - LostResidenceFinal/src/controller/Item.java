@@ -1,8 +1,8 @@
 /**Class: Item
- * @author Kyle Williams, Rick Price, Bradley Iverson, Miranda Darlington
+ * @author Sidibaba Simpara, Malik Key, Britney Familia, Angelica Jones
  * @version 1.0
- * Course: ITEC 3860, Spring 2022
- * Written: 02/18 - 04/27
+ * Course: ITEC 3860, Summer 2025
+ * 
  *
  *
  * This class acts as a blueprint for all Item objects.
