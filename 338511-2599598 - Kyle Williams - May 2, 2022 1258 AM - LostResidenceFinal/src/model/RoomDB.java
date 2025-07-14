@@ -11,81 +11,53 @@
 
 package model;
 
-import controller.Item;
-import controller.Room;
-import gameExceptions.GameException;
-
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
-public class RoomDB {
+public class RoomDatabase {
 
-    private ArrayList<Room> rooms = new ArrayList<>();
+    public static HashMap<Integer, Room> loadRooms(String filename) {
+        HashMap<Integer, Room> rooms = new HashMap<>();
 
-    /**
-     * @param roomID
-     * @return
-     * @throws GameException
-     * @purpose Get's a particular room object based on the room ID.
-     */
-    public Room getRoom(int roomID) throws GameException {
-        Room rm = new Room();
-        try {
-            SQLiteDB sqLiteDB = new SQLiteDB();
-            String sqlCmd = "Select * from ROOM WHERE roomNumber = " + roomID;
-            ResultSet rs = sqLiteDB.queryDB(sqlCmd);
-            while (rs.next()) {
-                rm.setRoomID(rs.getInt("roomNumber"));
-                rm.setName(rs.getString("roomName"));
-                rm.setDescription(rs.getString("roomDescription"));
-                rooms.add(rm);
+        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+            String line;
+
+            while ((line = br.readLine()) != null) {
+                if (line.trim().isEmpty()) continue;
+
+                String[] parts = line.split("\\|");
+
+                int roomID = Integer.parseInt(parts[0].trim());
+                String roomName = parts[1].trim();
+                String biome = parts[2].trim();
+                String description = parts[3].trim();
+                boolean visited = Boolean.parseBoolean(parts[4].trim());
+                String exitData = parts.length > 5 ? parts[5].trim() : "";
+
+                ArrayList<Exit> exits = new ArrayList<>();
+                if (!exitData.isEmpty()) {
+                    String[] exitParts = exitData.split(",");
+                    for (String exitPair : exitParts) {
+                        String[] directionID = exitPair.split(":");
+                        if (directionID.length == 2) {
+                            String direction = directionID[0].trim();
+                            int destID = Integer.parseInt(directionID[1].trim());
+                            exits.add(new Exit(direction, destID));
+                        }
+                    }
+                }
+
+                Room room = new Room(roomID, roomName, biome, description, visited, exits);
+                rooms.put(roomID, room);
             }
-            sqLiteDB.close();
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+        } catch (IOException e) {
+            System.out.println("Error reading room file: " + e.getMessage());
         }
-        return rm;
-    }
 
-
-    public ArrayList<Item> getItems(int roomID) throws GameException {
-
-        return null;
-    }
-
-
-    public String getMap() {
-
-        return null;
-    }
-
-
-    public ArrayList<Room> getRooms() {
         return rooms;
     }
-
-    public void updateRoom(int roomID) throws GameException, SQLException, ClassNotFoundException {
-        SQLiteDB sdb = new SQLiteDB();
-        String sql = "UPDATE ROOM SET visited = 1 WHERE roomNumber = " + roomID;
-        sdb.updateDB(sql);
-        sdb.close();
-    }
-
-    public int isVisited(int roomID) throws SQLException, ClassNotFoundException {
-        int visitedNum = 0;
-        SQLiteDB sdb = new SQLiteDB();
-        String sql = "SELECT visited FROM ROOM WHERE roomNumber = " + roomID;
-        ResultSet rs = sdb.queryDB(sql);
-        while(rs.next()) {
-            visitedNum = rs.getInt("visited");
-        }
-        sdb.close();
-        return visitedNum;
-    }
-
-
 }
